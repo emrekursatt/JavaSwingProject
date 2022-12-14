@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+  <name>guruyeni</name>
+  <driver>com.mysql.jdbc.Driver</driver>
+  <username>root</username>
+  <password>12345</password>
+  <url>jdbc:mysql://localhost:3306/guruyeni?characterEncoding=utf8</url>
+  <database></database>
+  <savePassword>true</savePassword>
+  <serverAddress></serverAddress>
+</jdbcDataAdapter>

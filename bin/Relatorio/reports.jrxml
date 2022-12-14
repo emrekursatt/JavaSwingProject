@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reports" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37f2aedd-a747-46f3-9980-ec46cd39d163">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="src\Relatorio\DataAdapter.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT 
+    stok3.Id,
+    stok3.stokAdi,
+    stok3.stokKodu,
+    stok3.stokTipiId,
+    stok3.birimi,
+    stok3.kdvTipiId,
+    stok3.barkodu,
+    stok3.olusturmaTarihi,
+    stok3.aciklama,
+    kdvtip.kdvKodu,
+    kdvtip.kdvdAdi,
+    kdvtip.kdvOrani,
+    stoktip.stokTipKodu,
+    stoktip.stokTipAdi,
+    stoktip.stokTipaciklama
+FROM
+    stok3,
+    kdvtip,
+    stoktip
+WHERE
+    kdvtip.Id = stok3.kdvtipiId
+        AND stoktip.Id = stok3.stoktipiId]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="stokAdi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="stokAdi"/>
+		<property name="com.jaspersoft.studio.field.label" value="stokAdi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="stokKodu" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="stokKodu"/>
+		<property name="com.jaspersoft.studio.field.label" value="stokKodu"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="stokTipiId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="stokTipiId"/>
+		<property name="com.jaspersoft.studio.field.label" value="stokTipiId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="birimi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="birimi"/>
+		<property name="com.jaspersoft.studio.field.label" value="birimi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="kdvTipiId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="kdvTipiId"/>
+		<property name="com.jaspersoft.studio.field.label" value="kdvTipiId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="barkodu" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="barkodu"/>
+		<property name="com.jaspersoft.studio.field.label" value="barkodu"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="olusturmaTarihi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="olusturmaTarihi"/>
+		<property name="com.jaspersoft.studio.field.label" value="olusturmaTarihi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="aciklama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="aciklama"/>
+		<property name="com.jaspersoft.studio.field.label" value="aciklama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stok3"/>
+	</field>
+	<field name="kdvKodu" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="kdvKodu"/>
+		<property name="com.jaspersoft.studio.field.label" value="kdvKodu"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kdvtip"/>
+	</field>
+	<field name="kdvdAdi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="kdvdAdi"/>
+		<property name="com.jaspersoft.studio.field.label" value="kdvdAdi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kdvtip"/>
+	</field>
+	<field name="kdvOrani" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="kdvOrani"/>
+		<property name="com.jaspersoft.studio.field.label" value="kdvOrani"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="kdvtip"/>
+	</field>
+	<field name="stokTipKodu" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="stokTipKodu"/>
+		<property name="com.jaspersoft.studio.field.label" value="stokTipKodu"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stoktip"/>
+	</field>
+	<field name="stokTipAdi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="stokTipAdi"/>
+		<property name="com.jaspersoft.studio.field.label" value="stokTipAdi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stoktip"/>
+	</field>
+	<field name="stokTipaciklama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="stokTipaciklama"/>
+		<property name="com.jaspersoft.studio.field.label" value="stokTipaciklama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="stoktip"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="260" y="0" width="330" height="60" uuid="17e2db7b-dd20-42da-a7d0-bb7ca273bd3e"/>
+				<text><![CDATA[REPORTS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="-20" y="0" width="50" height="31" uuid="fc9e80cd-f6d5-4e06-b069-1bf5ae013656"/>
+				<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="0" width="71" height="31" uuid="6c7278fa-0b75-4fbd-9677-02095c0df3da"/>
+				<textFieldExpression><![CDATA[$F{stokAdi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="0" width="71" height="31" uuid="e98fa75d-5d11-45b8-8277-548330decbc9"/>
+				<textFieldExpression><![CDATA[$F{stokKodu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="0" width="38" height="31" uuid="14d569ad-46b9-4a5c-a517-7f1f15b68381"/>
+				<textFieldExpression><![CDATA[$F{stokTipiId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="71" height="31" uuid="38bf95de-4fed-43db-8a4e-cf81de121f85"/>
+				<textFieldExpression><![CDATA[$F{birimi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="36" height="31" uuid="363f1657-53a6-4c9c-8af9-38fc330e2498"/>
+				<textFieldExpression><![CDATA[$F{kdvTipiId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="0" width="71" height="31" uuid="e886d329-c5d5-4314-a9a3-a8aa434b5321"/>
+				<textFieldExpression><![CDATA[$F{barkodu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="71" height="31" uuid="4fdff2c0-b29b-49d6-83b6-c512ed09e9dc"/>
+				<textFieldExpression><![CDATA[$F{olusturmaTarihi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="461" y="0" width="71" height="31" uuid="1639ee3a-bba3-4327-9db7-4fca5e0c4f4d"/>
+				<textFieldExpression><![CDATA[$F{aciklama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="0" width="40" height="31" uuid="92ab5dce-54e6-49ff-936d-be7dfd95b8c5"/>
+				<textFieldExpression><![CDATA[$F{kdvKodu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="71" height="31" uuid="09b5f80e-9eaa-4d5d-ae17-123af30edc80"/>
+				<textFieldExpression><![CDATA[$F{kdvdAdi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="780" y="0" width="42" height="31" uuid="2343d36e-6a3e-4422-80b4-3b64b07145c7"/>
+				<textFieldExpression><![CDATA[$F{stokTipaciklama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="681" y="0" width="49" height="31" uuid="a0da2cd6-0526-489a-b5f7-ccc1c232a265"/>
+				<textFieldExpression><![CDATA[$F{stokTipKodu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="730" y="0" width="50" height="31" uuid="eb849f2d-bad1-4683-8443-da6b0e6fb643"/>
+				<textFieldExpression><![CDATA[$F{stokTipAdi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="643" y="0" width="41" height="31" uuid="a60c5d96-27b1-4277-8c7f-de44f684d663"/>
+				<textFieldExpression><![CDATA[$F{kdvOrani}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
